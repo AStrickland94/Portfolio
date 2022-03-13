@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #eeeeee;
+}
+
+body {
+  background-color: #393e46;
+}
+@media only screen and (max-width: 700px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+  }
+}
+
+.sidebar {
+  background-color: #222831;
+  position: sticky;
+  top: 0;
+}
+@media only screen and (max-width: 700px) {
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+    border-bottom: 2px solid black;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 20vw;
+    border-right: 2px solid black;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 20vw;
+    border-right: 2px solid black;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  h1 {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .external-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+  .external-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .external-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.external-links img {
+  width: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+}
+.nav__ul {
+  list-style: none;
+}
+.nav__ul__li {
+  cursor: pointer;
+}
+@media only screen and (max-width: 700px) {
+  .nav__ul__li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 10vw;
+    height: 50px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+  .nav__ul__li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 10px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .nav__ul__li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 10px;
+  }
+}
+.nav__ul__li:hover {
+  background-color: #00adb5;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@media only screen and (max-width: 700px) {
+  .main {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+  .main {
+    width: 80vw;
+    height: 100vh;
+    margin-left: 20vw;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .main {
+    width: 80vw;
+    height: 100vh;
+    margin-left: 20vw;
+  }
+}
+.main__para {
+  width: 80%;
+  max-width: 1000px;
+}
