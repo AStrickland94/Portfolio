@@ -1,0 +1,20 @@
+@use "./modules/media.scss";
+@use "./modules/mixins.scss";
+
+.projects-list {
+    width: 80%;
+
+    &__left {
+        @include mixins.flex(row, space-between);
+        margin-top: 20px;
+    }
+
+    &__right {
+        @include mixins.flex(row-reverse, space-between);
+        margin-top: 20px;
+    }
+}
+
+.projects-list img {
+    width: 300px;
+}

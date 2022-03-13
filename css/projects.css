@@ -1,1 +1,21 @@
+.projects-list {
+  width: 80%;
+}
+.projects-list__left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.projects-list__right {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
 
+.projects-list img {
+  width: 300px;
+}
