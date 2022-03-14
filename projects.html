@@ -5,12 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/styles.css" />
-        <link rel="stylesheet" href="./css/projects.scss" />
+        <link rel="stylesheet" href="./css/projects.css" />
         <title>Adam Strickland</title>
     </head>
     <body>
         <div class="sidebar">
-            <h1>Adam Strickland</h1>
+            <h1 class="sidebar__heading">Adam Strickland</h1>
             <nav class="nav">
                 <ul class="nav__ul">
                     <li
@@ -49,36 +49,33 @@
         </div>
 
         <main class="main">
-            <h1>Projects page</h1>
-            <p class="main__para">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est
-                sem, fringilla eget tempus in, convallis vel odio. Morbi
-                aliquam, lacus in laoreet varius, dui tellus facilisis lectus,
-                eget auctor lacus augue eget massa. Nam cursus dapibus
-                condimentum. Donec ultrices arcu nec varius aliquam. Sed a magna
-                varius, interdum ex ut, porta libero. Aenean sit amet interdum
-                nulla. Cras commodo leo mauris, malesuada lobortis ipsum
-                fringilla eu. Donec convallis ipsum vehicula massa gravida
-                sollicitudin. Phasellus quis varius enim, sit amet dignissim
-                tellus. Sed efficitur, ex eu sodales imperdiet, turpis augue
-                feugiat nisl, non pharetra lorem nulla lobortis sem. In a urna
-                eu lacus sodales finibus. Donec imperdiet nec nisl eu malesuada.
-                Vestibulum sed euismod dolor. Cras sodales aliquam purus vitae
-                accumsan. Class aptent taciti sociosqu ad litora torquent per
-                conubia nostra, per inceptos himenaeos. Donec mollis laoreet
-                molestie. Fusce odio quam, sodales sit amet leo suscipit, cursus
-                sollicitudin ante. Proin rhoncus ac nisl id fermentum. Nullam
-                pharetra augue metus, vitae semper nunc luctus in. Donec egestas
-                lacus vitae mi rhoncus pretium. Mauris eu ligula auctor,
-                vulputate elit ac, vestibulum magna. Maecenas in laoreet elit,
-                ac mattis lorem. Suspendisse a aliquam augue. Proin odio metus,
-                suscipit vel tincidunt a, pretium laoreet sapien. Mauris tempor
-                arcu non elit iaculis consectetur. Etiam magna sapien, porta eu
-                fringilla ac, congue id quam. Vestibulum placerat tristique
-                sapien in pretium. Aliquam sed interdum neque, et hendrerit
-                orci. Nam non enim vel nisi placerat congue. Mauris arcu leo,
-                viverra sed sodales eu, finibus in ligula.
-            </p>
+            <h1 class="main__heading">Projects page</h1>
+            <div class="projects-list">
+                <div
+                    class="projects-list__project projects-list__project--left"
+                >
+                    <img src="./img/banana.jpg" />
+                    <p>Here is some sample text about the first project</p>
+                </div>
+                <div
+                    class="projects-list__project projects-list__project--right"
+                >
+                    <img src="./img/dice.jpeg" />
+                    <p>Here is some sample text about the second project</p>
+                </div>
+                <div
+                    class="projects-list__project projects-list__project--left"
+                >
+                    <img src="./img/fortune-cookie.jpg" />
+                    <p>Here is some sample text about the third project</p>
+                </div>
+                <div
+                    class="projects-list__project projects-list__project--right"
+                >
+                    <img src="./img/lottery.jpg" />
+                    <p>Here is some sample text about the Fourth Project</p>
+                </div>
+            </div>
         </main>
     </body>
 </html>

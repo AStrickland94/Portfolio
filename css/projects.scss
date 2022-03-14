@@ -1,0 +1,27 @@
+@use "./modules/media.scss";
+@use "./modules/mixins.scss";
+
+.projects-list {
+    width: 100%;
+    // overflow: auto;
+
+    &__project {
+        margin-top: 100px;
+
+        &--left {
+            @include mixins.flex(row, space-around, flex-start);
+        }
+
+        &--right {
+            @include mixins.flex(row-reverse, space-around, flex-start);
+        }
+
+        & p {
+            margin: 20px 0 0 20px;
+        }
+    }
+}
+
+.projects-list img {
+    width: 300px;
+}

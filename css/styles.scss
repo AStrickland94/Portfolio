@@ -1,12 +1,6 @@
 @use "./partials/palette";
 @use "./modules/media.scss";
-
-@mixin flex($direction: row, $justify: center, $align: center) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-}
+@use "./modules/mixins.scss";
 
 * {
     margin: 0;
@@ -18,13 +12,13 @@ body {
     background-color: palette.$background-color-light;
 
     @include media.phone {
-        @include flex(column, flex-start);
+        @include mixins.flex(column, flex-start);
     }
     @include media.tablet {
-        @include flex(row, left);
+        @include mixins.flex(row, left);
     }
     @include media.computer {
-        @include flex(row, left);
+        @include mixins.flex(row, left);
     }
 }
 
@@ -32,48 +26,49 @@ body {
     background-color: palette.$background-color-dark;
     position: sticky;
     top: 0;
+    align-self: flex-start;
 
     @include media.phone {
-        @include flex(row, space-between);
+        @include mixins.flex(row, space-between);
         width: 100vw;
         height: 100px;
         border-bottom: 2px solid black;
     }
 
     @include media.tablet {
-        @include flex(column, space-around);
+        @include mixins.flex(column, space-around);
         height: 100vh;
         width: 20vw;
         border-right: 2px solid black;
     }
 
     @include media.computer {
-        @include flex(column, space-around);
+        @include mixins.flex(column, space-around);
         height: 100vh;
         width: 20vw;
         border-right: 2px solid black;
     }
-}
 
-h1 {
-    @include media.phone {
-        width: 150px;
+    &__heading {
+        @include media.phone {
+            width: 150px;
+        }
     }
 }
 
 .external-links {
     @include media.phone {
-        @include flex(column);
+        @include mixins.flex(column);
         width: 10%;
     }
 
     @include media.tablet {
-        @include flex(row, space-evenly);
+        @include mixins.flex(row, space-evenly);
         width: 100%;
     }
 
     @include media.computer {
-        @include flex(row, space-evenly);
+        @include mixins.flex(row, space-evenly);
         width: 100%;
     }
 }
@@ -85,17 +80,17 @@ h1 {
 .nav {
     // width: 100%;
     @include media.phone {
-        @include flex(column);
+        @include mixins.flex(column);
         width: 40%;
     }
 
     @include media.tablet {
-        @include flex(row, space-evenly);
+        @include mixins.flex(row, space-evenly);
         width: 100%;
     }
 
     @include media.computer {
-        @include flex(row, space-evenly);
+        @include mixins.flex(row, space-evenly);
         width: 100%;
     }
     &__ul {
@@ -111,13 +106,13 @@ h1 {
             }
 
             @include media.tablet {
-                @include flex;
+                @include mixins.flex;
                 height: 50px;
                 margin-top: 10px;
             }
 
             @include media.computer {
-                @include flex;
+                @include mixins.flex;
                 height: 50px;
                 margin-top: 10px;
             }
@@ -131,24 +126,28 @@ h1 {
 }
 
 .main {
-    @include flex(column, space-around);
+    @include mixins.flex(column, flex-start);
 
     @include media.phone {
         width: 100vw;
-        height: 100vh;
+        // height: 100vh;
         margin-top: 100px;
     }
 
     @include media.tablet {
         width: 80vw;
-        height: 100vh;
-        margin-left: 20vw;
+        // height: 100vh;
+        &__heading {
+            position: absolute;
+        }
     }
 
     @include media.computer {
         width: 80vw;
-        height: 100vh;
-        margin-left: 20vw;
+        // height: 100vh;
+        &__heading {
+            position: absolute;
+        }
     }
 
     &__para {
