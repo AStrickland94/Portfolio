@@ -1,19 +1,23 @@
 .projects-list {
-  width: 80%;
+  width: 100%;
 }
-.projects-list__left {
+.projects-list__project {
+  margin-top: 100px;
+}
+.projects-list__project--left {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
+  justify-content: space-around;
+  align-items: flex-start;
 }
-.projects-list__right {
+.projects-list__project--right {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.projects-list__project p {
+  margin: 20px 0 0 20px;
 }
 
 .projects-list img {

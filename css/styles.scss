@@ -26,6 +26,7 @@ body {
     background-color: palette.$background-color-dark;
     position: sticky;
     top: 0;
+    align-self: flex-start;
 
     @include media.phone {
         @include mixins.flex(row, space-between);
@@ -47,11 +48,11 @@ body {
         width: 20vw;
         border-right: 2px solid black;
     }
-}
 
-h1 {
-    @include media.phone {
-        width: 150px;
+    &__heading {
+        @include media.phone {
+            width: 150px;
+        }
     }
 }
 
@@ -125,22 +126,28 @@ h1 {
 }
 
 .main {
-    @include mixins.flex(column, space-around);
+    @include mixins.flex(column, flex-start);
 
     @include media.phone {
         width: 100vw;
-        height: 100vh;
+        // height: 100vh;
         margin-top: 100px;
     }
 
     @include media.tablet {
         width: 80vw;
-        height: 100vh;
+        // height: 100vh;
+        &__heading {
+            position: absolute;
+        }
     }
 
     @include media.computer {
         width: 80vw;
-        height: 100vh;
+        // height: 100vh;
+        &__heading {
+            position: absolute;
+        }
     }
 
     &__para {

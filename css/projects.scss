@@ -2,16 +2,23 @@
 @use "./modules/mixins.scss";
 
 .projects-list {
-    width: 80%;
+    width: 100%;
+    // overflow: auto;
 
-    &__left {
-        @include mixins.flex(row, space-between);
-        margin-top: 20px;
-    }
+    &__project {
+        margin-top: 100px;
 
-    &__right {
-        @include mixins.flex(row-reverse, space-between);
-        margin-top: 20px;
+        &--left {
+            @include mixins.flex(row, space-around, flex-start);
+        }
+
+        &--right {
+            @include mixins.flex(row-reverse, space-around, flex-start);
+        }
+
+        & p {
+            margin: 20px 0 0 20px;
+        }
     }
 }
 
