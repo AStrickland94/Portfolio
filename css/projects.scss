@@ -8,20 +8,31 @@
     &__project {
         margin-top: 100px;
 
+        &__desc {
+            @include mixins.flex(column, space-between);
+            height: 100%;
+        }
+
+        &__img {
+            width: 300px;
+        }
+
+        &__link {
+            &__icon {
+                width: 40px;
+            }
+        }
+
         &--left {
-            @include mixins.flex(row, space-around, flex-start);
+            @include mixins.flex(row, center, flex-start);
         }
 
         &--right {
-            @include mixins.flex(row-reverse, space-around, flex-start);
+            @include mixins.flex(row-reverse, center, flex-start);
         }
 
         & p {
             margin: 20px 0 0 20px;
         }
     }
-}
-
-.projects-list img {
-    width: 300px;
 }
