@@ -9,7 +9,7 @@
         margin-top: 100px;
 
         &__desc {
-            @include mixins.flex(column, space-between);
+            @include mixins.flex(column, space-evenly);
             height: 200px;
         }
 
@@ -18,22 +18,16 @@
             height: 200px;
         }
 
-        &__link {
-            &__icon {
-                width: 40px;
-            }
-        }
-
         &--left {
-            @include mixins.flex(row, center, flex-start);
+            @include mixins.flex(row, space-evenly, flex-start);
         }
 
         &--right {
-            @include mixins.flex(row-reverse, center, flex-start);
+            @include mixins.flex(row-reverse, space-evenly, flex-start);
         }
 
         & p {
-            margin: 20px 0 0 20px;
+            margin: 20px;
         }
     }
 }

@@ -7,7 +7,7 @@
 .projects-list__project__desc {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   height: 200px;
 }
@@ -15,21 +15,18 @@
   width: 300px;
   height: 200px;
 }
-.projects-list__project__link__icon {
-  width: 40px;
-}
 .projects-list__project--left {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: flex-start;
 }
 .projects-list__project--right {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: flex-start;
 }
 .projects-list__project p {
-  margin: 20px 0 0 20px;
+  margin: 20px;
 }
