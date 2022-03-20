@@ -138,6 +138,7 @@ body {
 }
 .nav__ul {
   list-style: none;
+  width: 100%;
 }
 .nav__ul__li {
   cursor: pointer;
