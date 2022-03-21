@@ -19,11 +19,27 @@
         }
 
         &--left {
-            @include mixins.flex(row, space-evenly, flex-start);
+            @include media.phone {
+                @include mixins.flex(column, space-evenly);
+            }
+            @include media.tablet {
+                @include mixins.flex(column, space-evenly);
+            }
+            @include media.computer {
+                @include mixins.flex(row, space-evenly, flex-start);
+            }
         }
 
         &--right {
-            @include mixins.flex(row-reverse, space-evenly, flex-start);
+            @include media.phone {
+                @include mixins.flex(column, space-evenly);
+            }
+            @include media.tablet {
+                @include mixins.flex(column, space-evenly);
+            }
+            @include media.computer {
+                @include mixins.flex(row-reverse, space-evenly, flex-start);
+            }
         }
 
         & p {

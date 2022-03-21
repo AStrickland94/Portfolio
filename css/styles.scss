@@ -59,8 +59,9 @@ body {
 
 .external-links {
     @include media.phone {
-        @include mixins.flex(column);
+        @include mixins.flex(column, space-evenly);
         width: 10%;
+        height: 100%;
     }
 
     @include media.tablet {
@@ -128,7 +129,7 @@ body {
 }
 
 .main {
-    @include mixins.flex(column, flex-start);
+    @include mixins.flex(column, space-between);
 
     @include media.phone {
         width: 100vw;
@@ -139,17 +140,11 @@ body {
     @include media.tablet {
         width: 80vw;
         // height: 100vh;
-        &__heading {
-            position: absolute;
-        }
     }
 
     @include media.computer {
         width: 80vw;
         // height: 100vh;
-        &__heading {
-            position: absolute;
-        }
     }
 
     &__para {
