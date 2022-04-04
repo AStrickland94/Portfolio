@@ -1,0 +1,68 @@
+@use "./partials/palette";
+@use "./modules/media.scss";
+@use "./modules/mixins.scss";
+
+.main {
+    height: 80vh;
+    justify-content: flex-start;
+    overflow: hidden;
+
+    @include media.phone {
+        &__heading {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        &__head_bg {
+            position: absolute;
+            z-index: -1;
+            height: 200px;
+            width: 90%;
+            margin-top: -53px;
+            background-color: palette.$hover-color;
+            transform: rotate(-8deg);
+        }
+    }
+    @include media.tablet {
+        &__heading {
+            width: 70%;
+            font-size: 80px;
+        }
+        &__subheading {
+            width: 70%;
+            font-size: 50px;
+            text-align: right;
+        }
+        &__head_bg {
+            position: absolute;
+            z-index: -1;
+            height: 270px;
+            width: 90%;
+            margin-top: -10px;
+            background-color: palette.$hover-color;
+            transform: rotate(-8deg);
+        }
+    }
+    @include media.computer {
+        &__heading {
+            width: 70%;
+            font-size: 100px;
+            margin-top: 100px;
+        }
+        &__subheading {
+            width: 70%;
+            font-size: 50px;
+            text-align: right;
+        }
+        &__head_bg {
+            position: absolute;
+            overflow: hidden;
+            z-index: -1;
+            height: 360px;
+            width: 90%;
+            margin-top: 70px;
+            background-color: palette.$hover-color;
+            transform: rotate(-8deg);
+        }
+    }
+}
